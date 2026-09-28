@@ -232,7 +232,7 @@ footer{ background:#000; text-align:center; padding:30px; color:#888; }
   .nav-links a{ color:white; }
   .hamburger{ display:block; }
   .gallery{ grid-template-columns:repeat(2,1fr); }
-  .hero{ background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)), url('images/background-200.png') center/cover; }
+  .hero{ background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)), url('images/landscape-8000.png') center/cover; }
   .hero h1{ font-size:32px; }
   .hero p{ font-size:12px; }
 }
