@@ -92,7 +92,10 @@
   <option>Press-on Nails - ₦6000</option>
   <option>Complete Package - ₦8000</option>
  </select>
- <input type="date" name="date" id="date" required>
+ <div style="position: relative; width: 100%;">
+    <input type="date" id="booking-date" style="width:100%; padding-right: 40px;">
+    <span style="position:absolute; right:12px; top:50%; transform:translateY(-50%); pointer-events:none;">📅</span>
+  </div>
  <select name="time" id="time">
   <option>Morning 9am-12pm</option>
   <option>Afternoon 12pm-4pm</option>

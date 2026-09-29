@@ -295,32 +295,17 @@ footer{ background:#000; text-align:center; padding:30px; color:#888; }
   .hero h1{ font-size:32px; }
   .hero p{ font-size:12px; }
 }
+}
 
-/* 1. General input first */
-input, select, textarea{
+/* Final fix - hide double icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0 !important;
+  position: absolute;
+  right: 0;
+  top: 0;
   width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
-  /* ... your other styles */
-}
-
-/* 2. Date fix BELOW am — so e override the general one */
-input[type="date"]{
-  position: relative;
-  background-color: white;
-  color: #333;
-  -webkit-appearance: auto; /* very important - bring back icon */
-  appearance: auto;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator{
-  opacity: 1;
-  display: block;
-  width: 20px;
-  height: 20px;
+  height: 100%;
   cursor: pointer;
-  filter: invert(0.5);
-}
 }
 
 
