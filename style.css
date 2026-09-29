@@ -235,5 +235,93 @@ footer{ background:#000; text-align:center; padding:30px; color:#888; }
   .hero{ background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)), url('images/landscape-8000.png') center/cover; }
   .hero h1{ font-size:32px; }
   .hero p{ font-size:12px; }
+
+  input,select{ padding:12px; border-radius:8px; border:none; outline:none; }
+
+footer{ background:#000; text-align:center; padding:30px; color:#888; }
+
+/* CART - SINGLE DEFINITION */
+#cart-popup{
+  display:none; position:fixed; top:0; left:0; width:100%; height:100%;
+  background:rgba(0,0,0,0.6); z-index:9999;
+  justify-content:center; align-items:center;
 }
+.cart-box{
+  background:#fff; 
+  padding:25px; 
+  border-radius:15px; 
+  width:90%; max-width:400px; 
+  color:#000;
+}
+.checkout-btn{ 
+  width:100%; 
+  background:#25D366; 
+  color:white; 
+  border:none; 
+  padding:12px; 
+  border-radius:8px; 
+  margin-top:10px; 
+  font-weight:700; 
+  cursor:pointer; 
+}
+.close-btn{ 
+  width:100%; 
+  background:#ddd; 
+  border:none; 
+  padding:10px; 
+  border-radius:8px; 
+  margin-top:8px; 
+  cursor:pointer; 
+}
+
+@media(max-width:768px){
+  .nav-links{
+    display:none; 
+    flex-direction:column; 
+    position:absolute; 
+    top:70px; 
+    right:5%;
+    background:#111; 
+    padding:20px; 
+    border-radius:12px; 
+    width:200px;
+    box-shadow:0 10px 30px rgba(0,0,0,.5);
+  }
+  .nav-links.active{ display:flex; }
+  .nav-links a{ color:white; }
+  .hamburger{ display:block; }
+  .gallery{ grid-template-columns:repeat(2,1fr); }
+  .hero{ background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)), url('images/landscape-8000.png') center/cover; }
+  .hero h1{ font-size:32px; }
+  .hero p{ font-size:12px; }
+}
+
+/* 1. General input first */
+input, select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  /* ... your other styles */
+}
+
+/* 2. Date fix BELOW am — so e override the general one */
+input[type="date"]{
+  position: relative;
+  background-color: white;
+  color: #333;
+  -webkit-appearance: auto; /* very important - bring back icon */
+  appearance: auto;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator{
+  opacity: 1;
+  display: block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  filter: invert(0.5);
+}
+}
+
+
 
