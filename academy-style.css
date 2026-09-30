@@ -4,6 +4,7 @@
   box-sizing:border-box;
   font-family:'Poppins',sans-serif;
 }
+html{scroll-behavior: smooth;}
 body{
   background:#0f0f0f; 
   color:#fff;
@@ -191,4 +192,9 @@ footer{ background:#000; text-align:center; padding:30px; color:#888; }
   .hero h1{ font-size:32px; }
   .hero p{ font-size:12px; }
 }
+
+.field{margin-bottom:12px}
+input.error, select.error{border:2px solid red!important; background:#ffe6e6!important;}
+.error-msg{color:red; font-size:11px; display:none; font-weight:600; margin-top:4px}
+.error-msg.show{display:block}
 

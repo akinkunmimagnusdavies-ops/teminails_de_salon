@@ -4,6 +4,7 @@
   box-sizing:border-box;
   font-family:'Poppins',sans-serif;
 }
+html{scroll-behavior: smooth;}
 body{
   background:#0f0f0f; /* clean luxury black, not purple */
   color:#fff;
@@ -73,7 +74,7 @@ nav h2{
   text-decoration:none;
 }
 
-.discount-badge{
+/* .discount-badge{
   display:inline-block;
   background:linear-gradient(135deg,#2702f8,#00ff15);
   color:#fff; 
@@ -86,7 +87,7 @@ nav h2{
   box-shadow:0 4px 15px rgba(255,0,128,0.4);
 }
 @keyframes pulse{ 0%{transform:scale(1)} 50%{transform:scale(1.07)} 100%{transform:scale(1)} }
-
+ */
 section{ padding:60px 5%; }
 
 .service-grid{ 
@@ -291,8 +292,8 @@ footer{ background:#000; text-align:center; padding:30px; color:#888; }
   .nav-links a{ color:white; }
   .hamburger{ display:block; }
   .gallery{ grid-template-columns:repeat(2,1fr); }
-  .hero{ background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)), url('images/landscape-8000.png') center/cover; }
-  .hero h1{ font-size:32px; }
+  .hero{ background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.55)), url('images/landscape-8000.png') center/cover; }
+  .hero h1{ font-size:30px; margin-top: 60px; }
   .hero p{ font-size:12px; }
 }
 }
@@ -308,5 +309,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
+.field{margin-bottom:12px}
+input.error, select.error{border:2px solid red!important; background:#ffe6e6!important;}
+.error-msg{color:red; font-size:11px; display:none; font-weight:600; margin-top:4px}
+.error-msg.show{display:block}
 
 

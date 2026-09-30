@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teminails de Salon</title>
-  <meta name="description" content="TEMINAILS de SALON
- - Premium nail services in Lagos. Book your session on WhatsApp now">
+  <meta name="description" content="TEMINAILS de SALON - Premium nail services in Lagos. Book your session on WhatsApp now">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -27,12 +26,8 @@
   </nav>
 
   <div class="hero" id="home">
-    <div class="discount-badge">
-      🔥 HOT DEALS (Order Online)
-    </div>
-    <h1>Teminails <span>De Salon
-</span></h1>
-    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, a culpa dolorem non ea accusantium iusto consequuntur molestiae, eligendi quos dolor mollitia incidunt numquam esse totam suscipit voluptatum dicta vel.</p> -->
+    <!-- <div class="discount-badge">🔥 HOT DEALS (Order Online)</div> -->
+    <h1>Teminails <span>De Salon</span></h1>
     <a href="#book" class="btn">Book Here</a>
   </div>
 
@@ -55,210 +50,75 @@
 <div id="cart-popup">
   <div class="cart-box">
     <h3>🛒 Your Booking</h3>
-    <div id="cart-items"></div>
-    <hr>
+    <div id="cart-items"></div><hr>
     <p><strong>Total: ₦<span id="cart-total">0</span></strong></p>
     <button class="checkout-btn" onclick="checkout()">Checkout on WhatsApp</button>
     <button class="close-btn" onclick="closeCart()">Continue Shopping</button>
   </div>
 </div>
 
-
-
 <section id="gallery" style="background:#151515">
   <h2 style="text-align:center">Gallery</h2>
   <div class="gallery" style="margin-top:20px">
-    <img src="images/images3.jpeg" alt="">
-    <img src="images/images3.jpeg" alt="">
-    <img src="images/images3.jpeg" alt="">
-    <img src="images/images4.jpeg" alt="">
-    <img src="images/images5.jpeg" alt="">
-    <img src="images/images6.jpeg" alt="">
+    <img src="images/images3.jpeg" alt=""><img src="images/images3.jpeg" alt=""><img src="images/images3.jpeg" alt="">
+    <img src="images/images4.jpeg" alt=""><img src="images/images5.jpeg" alt=""><img src="images/images6.jpeg" alt="">
   </div>
-  <p style="text-align:center;margin-top:15px;color:#888"><small>TEMINAILS de SALON
-</small></p>
 </section>
 
 <section id="book">
-  <h2 style="text-align:center">Book <span>SESSIONS</span> at TEMINAILS de SALON
-</h2><i>
-  <form id="bookingForm" action="https://formspree.io/f/mrpbqwgw" method="POST">
- <input type="text" name="name" id="name" placeholder="Your Name" required>
- <input type="tel" name="phone" id="phone" placeholder="Your Phone" required>
- <select name="service" id="service" required>
-  <option value="">Select Service</option>
-  <option>Simple  Design- ₦5000</option>
-  <option>Nail Care- ₦4000</option>
-  <option>Press-on Nails - ₦6000</option>
-  <option>Complete Package - ₦8000</option>
- </select>
- <div style="position: relative; width: 100%;">
-    <input type="date" id="booking-date" style="width:100%; padding-right: 40px;">
-    <span style="position:absolute; right:12px; top:50%; transform:translateY(-50%); pointer-events:none;">📅</span>
-  </div>
- <select name="time" id="time">
-  <option>Morning 9am-12pm</option>
-  <option>Afternoon 12pm-4pm</option>
-  <option>Evening 4pm-9pm</option>
- </select>
+  <h2 style="text-align:center">Book <span>SESSIONS</span> at TEMINAILS de SALON</h2>
+  <form id="bookingForm" action="https://formspree.io/f/mrpbqwgw" method="POST" novalidate>
+   <div class="field">
+     <input type="text" name="name" id="fName" placeholder="Your Name" required>
+     <p class="error-msg" id="eName">❌ Only letters, min 2 chars</p>
+   </div>
+   <div class="field">
+     <input type="tel" name="phone" id="fPhone" placeholder="Phone (11 digits)" required maxlength="11">
+     <p class="error-msg" id="ePhone">❌ Must be 11 digits numbers only</p>
+   </div>
+   <div class="field">
+     <select name="service" id="fService" required>
+      <option value="">Select Service</option>
+      <option>Simple Design - ₦5000</option><option>Nail Care - ₦4000</option>
+      <option>Press-on Nails - ₦6000</option><option>Complete Package - ₦8000</option>
+     </select>
+     <p class="error-msg" id="eService">❌ Select a service</p>
+   </div>
+   <div class="field">
+    <div style="position: relative; width: 100%;">
+      <input type="date" name="date" id="fDate" required style="width:100%; padding-right: 40px;">
+      <span style="position:absolute; right:12px; top:50%; transform:translateY(-50%); pointer-events:none;">📅</span>
+    </div>
+    <p class="error-msg" id="eDate">❌ Choose a valid date (not past)</p>
+   </div>
+   <div class="field">
+     <select name="time" id="fTime" required>
+      <option value="">Select Time</option>
+      <option>Morning 9am-12pm</option><option>Afternoon 12pm-4pm</option><option>Evening 4pm-9pm</option>
+     </select>
+     <p class="error-msg" id="eTime">❌ Select time</p>
+   </div>
+   <input type="hidden" name="_subject" value="New Teminails de Salon Booking!">
+   <input type="text" name="_gotcha" style="display:none">
+   <button class="btn" type="submit" id="bookBtn">Book Now</button>
+   <p id="formStatus" style="text-align:center;margin-top:10px;display:none"></p>
+  </form>
 
- <!-- Formspree helpers -->
- <input type="hidden" name="_subject" value="New Teminails de Salon
- Booking!">
- <input type="text" name="_gotcha" style="display:none">
-
- <button class="btn" type="submit" id="bookBtn">Book Now</button>
- <p id="formStatus" style="text-align:center;margin-top:10px;display:none"></p>
-</form>
-
-<div style="text-align:center; margin-top:20px">
-  <p style="color:#888; margin-bottom:10px">Or</p>
-  <a id="waDirect" href="https://wa.me/2349156002887?text=Hi%20TEMINAILS%20ACADEMY!%20I%20want%20to%20book%20a%20nail%20session"
-    target="_blank"
-    style="display:inline-block; background:#25D366; color:#fff; padding:14px 28px; border-radius:30px; font-weight:700; text-decoration:none;">
-    Chat on WhatsApp Directly
-  </a>
-  <p style="color:#666; font-size:12px; margin-top:8px">Fastest response • 09156002887</p>
-</div>
-
-  <div style="margin-top:45px">
-  <h3 style="text-align:center;margin-bottom:15px">📍 Find TEMINAILS de SALON
- — Lagos</h3>
-  <iframe src="https://maps.google.com/maps?q=Lagos%20Nigeria&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0;border-radius:15px" loading="lazy"></iframe>
-  <p style="text-align:center;margin-top:10px;color:#888"><small>Change map q= to exact street of VIV STUDIOS</small></p>
+  <div style="text-align:center; margin-top:20px">
+    <a id="waDirect" href="https://wa.me/2349156002887" target="_blank"
+      style="display:inline-block; background:#25D366; color:#fff; padding:14px 28px; border-radius:30px; font-weight:700; text-decoration:none;">
+      Chat on WhatsApp Directly
+    </a>
   </div>
 </section>
 
 <footer>
-  <p style="color:#ffcc00;font-weight:700">TEMINAILS de SALON
-</p>
-  <p>Premium Nail Studio • Lagos, Nigeria</p>
-  <p style="margin-top:15px">Open: Mon-Sat 9am - 9pm | Sun 12pm - 8pm</p>
-  <p style="margin-top:15px;font-size:12px">
-© <span id="year"></span> TEMINAILS de SALON
- • All Rights Reserved • 
-<a href="#" style="color:#888">Privacy Policy</a> • Built by Kreations
-</p>
+  <p style="color:#ffcc00;font-weight:700">TEMINAILS de SALON</p>
+  <p>© <span id="year"></span> All Rights Reserved • Built by Kreations</p>
 </footer>
 
-
-<script>
-function toggleMenu(){
-  document.getElementById('navLinks').classList.toggle('active');
-}
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    document.getElementById('navLinks').classList.remove('active');
-  });
-});
-
-// YEAR
-document.getElementById('year').textContent = new Date().getFullYear();
-
-// FORM
-const bookingForm = document.getElementById('bookingForm');
-const status = document.getElementById('formStatus');
-if(bookingForm){
-  bookingForm.addEventListener("submit", async (e) => {
-   e.preventDefault();
-   let btn = document.getElementById('bookBtn');
-   btn.textContent = "Sending...";
-   btn.disabled = true;
-   status.style.display = "block";
-   status.textContent = "Sending your booking...";
-   try {
-    let data = new FormData(bookingForm);
-    let res = await fetch(bookingForm.action, {method:'POST', body:data, headers:{'Accept':'application/json'}});
-     if(res.ok){
-       status.style.color = "#00ff88";
-       status.textContent = "✅ Booking sent! We will contact you shortly.";
-      bookingForm.reset();
-     } else {
-       status.style.color = "red";
-       status.textContent = "❌ Oops, failed. WhatsApp us: 09156002887";
-     }
-   } catch(err) {
-     status.style.color = "red";
-     status.textContent = "❌ Network error. WhatsApp us: 09156002887";
-   }
-   btn.textContent = "Book Now";
-   btn.disabled = false;
-  });
-}
-
-// WA SMART BTN
-document.getElementById('waDirect')?.addEventListener('click', function(){
-  let name = document.getElementById('name')?.value || "Someone";
-  let service = document.getElementById('service')?.value || "nail session";
-  let date = document.getElementById('date')?.value || "";
-  let text = `Hi TEMINAILS ACADEMY! I'm ${name}, I want to book ${service} ${date? 'on '+date : ''}`;
-  this.href = `https://wa.me/2349156002887?text=${encodeURIComponent(text)}`;
-});
-
-// CART - FIXED
-let cart = JSON.parse(localStorage.getItem('teminails_salon_cart')) || [];
-
-function addToCart(name, price) {
-  let existing = cart.find(item => item.name === name);
-  if (existing) existing.qty += 1;
-  else cart.push({name, price, qty: 1});
-  localStorage.setItem('teminails_salon_cart', JSON.stringify(cart));
-  updateCart();
-  openCart();
-}
-
-function updateCart() {
-  const countEl = document.getElementById('cart-count');
-  const itemsEl = document.getElementById('cart-items');
-  const totalEl = document.getElementById('cart-total');
-  let totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
-  if(countEl) countEl.innerText = totalCount;
-  let total = 0;
-  let html = "";
-  cart.forEach((item, index) => {
-    total += item.price * item.qty;
-    html += `<p style="color:#000; display:flex; justify-content:space-between; margin:10px 0;">
-      <span>${item.name} (₦${item.price})</span>
-      <span>
-        <button onclick="changeQty(${index}, -1)">-</button> ${item.qty} <button onclick="changeQty(${index}, 1)">+</button>
-        <button onclick="removeItem(${index})" style="margin-left:8px;background:red;color:white;border:none;padding:2px 8px;border-radius:10px;">x</button>
-      </span></p>`;
-  });
-  if(itemsEl) itemsEl.innerHTML = html || "<p style='color:#888'>Cart empty</p>";
-  if(totalEl) totalEl.innerText = total.toLocaleString();
-}
-
-function changeQty(i, delta){
-  cart[i].qty += delta;
-  if(cart[i].qty <= 0) cart.splice(i,1);
-  localStorage.setItem('teminails_salon_cart', JSON.stringify(cart));
-  updateCart();
-}
-function removeItem(i){
-  cart.splice(i,1);
-  localStorage.setItem('teminails_salon_cart', JSON.stringify(cart));
-  updateCart();
-}
-function openCart(){
-  document.getElementById('cart-popup').style.display = 'flex';
-}
-function closeCart(){
-  document.getElementById('cart-popup').style.display = 'none';
-}
-function checkout(){
-  if(cart.length === 0) return alert("Cart empty");
-  let msg = "Hi TEMINAILS DE SALON! I want to book:\n";
-  cart.forEach(item => { msg += `- ${item.name} x${item.qty} = ₦${item.price*item.qty}\n`; });
-  let total = cart.reduce((s,i)=> s + i.price*i.qty, 0);
-  msg += `\nTotal: ₦${total}\nPlease confirm availability.`;
-  window.open(`https://wa.me/2349156002887?text=${encodeURIComponent(msg)}`, '_blank');
-}
-
-updateCart();
-
-document.getElementById('cart-popup')?.addEventListener('click', (e)=>{
-  if(e.target.id === 'cart-popup') closeCart();
-});
-</script>
+<script src="js/validation.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
