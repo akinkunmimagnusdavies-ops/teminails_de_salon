@@ -295,6 +295,9 @@ footer{ background:#000; text-align:center; padding:30px; color:#888; }
   .hero{ background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.55)), url('images/landscape-8000.png') center/cover; }
   .hero h1{ font-size:30px; margin-top: 60px; }
   .hero p{ font-size:12px; }
+  .service-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
 }
 }
 
