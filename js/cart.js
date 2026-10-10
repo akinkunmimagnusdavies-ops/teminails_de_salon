@@ -1,7 +1,7 @@
 // Auto detect page
 const CART_KEY = window.location.pathname.includes('academy')
- ? 'teminails_academy_cart'
-  : 'teminails_salon_cart';
+ ? 'nailstudio_academy_cart'
+  : 'nailstudio_salon_cart';
 
 let cart = JSON.parse(localStorage.getItem(CART_KEY)) || [];
 
@@ -37,8 +37,8 @@ function closeCart(){ document.getElementById('cart-popup').style.display='none'
 function checkout(){
   if(cart.length===0) return alert("Cart empty");
   let msg = CART_KEY.includes('academy')
-   ? "Hi TEMINAILS ACADEMY! I want to enroll:\n"
-    : "Hi TEMINAILS DE SALON! I want to book:\n";
+   ? "Hi NAIL STUDIO ACADEMY! I want to enroll:\n"
+    : "Hi NAIL STUDIO ! I want to book:\n";
   cart.forEach(item=>{ msg+=`- ${item.name} x${item.qty} = ₦${item.price*item.qty}\n`; });
   let total=cart.reduce((s,i)=>s+i.price*i.qty,0);
   msg+=`\nTotal: ₦${total}\nName: ${document.getElementById('fName')?.value || document.getElementById('name')?.value || ''}`;

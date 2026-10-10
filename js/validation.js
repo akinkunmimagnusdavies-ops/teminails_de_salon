@@ -63,7 +63,7 @@ form.addEventListener("submit", async (e) => {
    service: sanitize(fService.value),
    date: dateVal,
    time: fTime.value,
-   cart: JSON.parse(localStorage.getItem('teminails_salon_cart') || '[]')
+   cart: JSON.parse(localStorage.getItem('nailstudio_salon_cart') || '[]')
  };
 
  let btn = document.getElementById('bookBtn');

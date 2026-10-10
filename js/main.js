@@ -19,6 +19,6 @@ document.getElementById('waDirect')?.addEventListener('click', function(){
   let name = document.getElementById('fName')?.value || "Someone";
   let service = document.getElementById('fService')?.value || "nail session";
   let date = document.getElementById('fDate')?.value || "";
-  let text = `Hi TEMINAILS! I'm ${name}, I want to book ${service} ${date? 'on '+date : ''}`;
+  let text = `Hi NAIL STUDIO ! I'm ${name}, I want to book ${service} ${date? 'on '+date : ''}`;
   this.href = `https://wa.me/2349156002887?text=${encodeURIComponent(text)}`;
 });

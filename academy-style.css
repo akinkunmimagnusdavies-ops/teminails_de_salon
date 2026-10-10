@@ -38,7 +38,7 @@ list-style:none;
 .hero{
   padding:90px 5%; 
   text-align:center;
-  background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('images/background-600.png') center;
+  background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55));
 }
 .hero h1{
   font-size:44px; 
@@ -188,7 +188,7 @@ footer{ background:#000; text-align:center; padding:30px; color:#888; }
   .nav-links a{ color:white; }
   .hamburger{ display:block; }
   .gallery{ grid-template-columns:repeat(2,1fr); }
-  .hero{ background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)), url('images/background-200.png') center/cover; }
+  .hero{ background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)); }
   .hero h1{ font-size:32px; }
   .hero p{ font-size:12px; }
   .service-grid{

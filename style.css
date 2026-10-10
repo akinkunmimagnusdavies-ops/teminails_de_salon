@@ -44,9 +44,7 @@ nav h2{
   .hero{
   padding:90px 5%; 
   text-align:center;
-  background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url('images/landscape-8000.png');
-  background-position: center;
-  background-repeat: no-repeat;
+  background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65));
 
 }
 .hero h1{
@@ -233,7 +231,7 @@ footer{ background:#000; text-align:center; padding:30px; color:#888; }
   .nav-links a{ color:white; }
   .hamburger{ display:block; }
   .gallery{ grid-template-columns:repeat(2,1fr); }
-  .hero{ background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)), url('images/landscape-8000.png') center/cover; }
+  .hero{ background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)) }
   .hero h1{ font-size:32px; }
   .hero p{ font-size:12px; }
 
